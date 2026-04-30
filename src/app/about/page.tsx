@@ -272,7 +272,7 @@ export default function About() {
       items={about.studies.institutions.map((institution, index) => ({
         label: institution.name,
         description: institution.description,
-        state: "completed" as const, // or "default" | "active" | "completed"
+        state: "default" as const, // or "default" | "active" | "completed"
         // Optional: add custom time if you have it in your data
         // time: institution.timeframe;
       }))}
