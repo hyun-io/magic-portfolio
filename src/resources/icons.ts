@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 import {
   HiArrowUpRight,
@@ -20,16 +20,36 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiAsteriskBold,
+  PiBracketsAngleDuotone,
 } from "react-icons/pi";
+
+import { RiTailwindCssFill } from "react-icons/ri";
 
 import {
   SiJavascript,
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiWoocommerce,
+  SiTypescript,
+  SiMaterialdesignicons,
+  SiBuymeacoffee,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+
+import { FaGitAlt, FaWordpress, FaReact } from "react-icons/fa";
+
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+import { BiLogoAdobe } from "react-icons/bi";
+
+import { GoGear } from "react-icons/go";
+
+import { IoLogoVercel } from "react-icons/io5";
+
+import { LuSparkle } from "react-icons/lu";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -64,6 +84,21 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  git: FaGitAlt,
+  adobe: BiLogoAdobe,
+  wordpress: FaWordpress,
+  woocommerce: SiWoocommerce,
+  api: GoGear,
+  react: FaReact,
+  aterisk: PiAsteriskBold,
+  brackets: PiBracketsAngleDuotone,
+  tailwindcss: RiTailwindCssFill,
+  typescript: SiTypescript,
+  vercel: IoLogoVercel,
+  loading: AiOutlineLoading3Quarters,
+  design: SiMaterialdesignicons,
+  sparkle4: LuSparkle,
+  buymeacoffee: SiBuymeacoffee,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -1,0 +1,63 @@
+---
+title: "A Real-Time Shared Entertainment Tracker for Couples"
+publishedAt: "2026-03-17"
+summary: "A full-stack entertainment tracker built for long-distance couples to share movies, TV shows, and games, featuring real-time updates, chat, and collaborative commenting. Designed with a modern dark theme and optimised for both desktop and mobile."
+images:
+  - "/images/projects/01/cover-01.jpg"
+team:
+  - name: "Hyun"
+    role: "Frontend Designer & Developer"
+    avatar: "/images/avatar.jpg"
+    Instagram: "https://www.instagram.com/hyun.dev"
+link: "https://liv.hyun.im"
+---
+
+*Jan 2026 - Present | Version 3.3.0*
+
+## Overview
+
+A full-stack entertainment tracker built for long-distance couples to share movies, TV shows, and games, featuring real-time updates, chat, and collaborative commenting. Designed with a modern dark theme and optimised for both desktop and mobile.
+
+## Key Features
+
+- **Real-time Synchronisation**: Instant updates across both users using Supabase real-time subscriptions, ensuring that both partners see the same content and interactions without needing to refresh.
+- **Interactive Dashboard**: Tab-based navigation for Movies, TV Shows, and Games. Each tab displays a list of shared entertainment items with options to add, edit, and comment.
+- **Dual View Modes**: Collaborated closely with designers by setting up a shared design library in Figma. This library was synchronized with the codebase, ensuring design handoffs were seamless and that design tokens remained consistent across both platforms.
+- **Smart Episode Tracking**: Track TV show progress with S1E2 format and season/episode management, allowing couples to easily keep track of their shared entertainment experiences.
+- **Collaborative Comments**: Full CRUD comment system with star ratings and real-time updates, enabling couples to share their thoughts and feedback on their entertainment choices.
+- **Integrated Chat**: Persistent chat panel with message history, deletion, and timestamps.
+- **Online Status Indicators**:  Real-time user presence with visual status badges, enhancing the sense of connection between users.
+- **Notification System**: Custom toast notifications for all user actions, providing immediate feedback and enhancing the user experience.
+- **Dark/Light Mode**: Theme persistence with smooth transitions, allowing users to choose their preferred visual style.
+- **Responsive Design**: Mobile-first approach with consistent experience across devices.
+
+### Key Contributions
+- Architected a complete real-time system using Supabase subscriptions for instant cross-user updates
+- Built an intuitive episode tracking interface for TV shows with manual progress adjustment
+- Implemented optimistic UI updates across all CRUD operations for seamless user experience
+- Designed a responsive, mobile-first interface with persistent theme preferences
+- Integrated third-party APIs (OMDb, RAWG) for comprehensive media metadata
+- Created a dual-view (grid/list) layout system with persistent user preferences
+
+### Impact
+- Zero page refreshes needed for real-time updates
+- 100% TypeScript coverage across 25+ components
+- Deployed to Vercel with 99.9% uptime
+ - Successfully handles 50+ concurrent real-time subscription
+
+## Technical Highlights
+- Real-time presence detection for user online status
+- Custom toast notification system with action confirmations
+- Supabase Row Level Security for data protection
+- Debounced search to optimize API calls
+- Responsive design supporting all device sizes (320px - 4K)
+
+## Technologies Used
+
+![Next.js](https://img.shields.io/badge/Next.js-16.1.6-000000?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwind-css)
+![Supabase](https://img.shields.io/badge/Supabase-2.0-3ECF8E?style=flat-square&logo=supabase)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel)
+![ESLint](https://img.shields.io/badge/ESLint-8.0-4B32C3?style=flat-square&logo=eslint)
+![Lucide](https://img.shields.io/badge/Lucide_Icons-Latest-F56565?style=flat-square&logo=lucide)

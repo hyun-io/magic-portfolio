@@ -13,6 +13,21 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "m.media-amazon.com",
+        pathname: "/images/**",
+      },
+      {
+        protocol: "https",
+        hostname: "media.rawg.io",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "img.shields.io",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "www.google.com",
         pathname: "**",
       },

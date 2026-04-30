@@ -1,21 +1,21 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "E'zzati",
+  lastName: "Roslan",
+  name: "Hyun",
+  role: "Frontend Designer and Developer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "hyun.dev@proton.me",
+  location: "Asia/Brunei", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Bahasa Melayu"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Websites that work as good as they look</>,
+  description: <>No spam — just good deals when they drop. 🎉</>,
 };
 
 const social: Social = [
@@ -25,25 +25,25 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://github.com/hyun-io",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/hyun.dev/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/@hyun.dev",
+    essential: true,
+  },
+  {
+    name: "Buy me a coffee",
+    icon: "buymeacoffee",
+    link: "https://buymeacoffee.com/hyunim",
     essential: true,
   },
   {
@@ -65,18 +65,18 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Available for work</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/a-real-time-shared-entertainment-tracker-for-couples",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm a Brunei-based Frontend Developer crafting digital experiences at the intersection of <Text size="xl" weight="strong">design</Text>, <Text size="xl" weight="strong">technology</Text>, and <Text size="xl" weight="strong">user experience</Text> so your business shows up online the way it deserves to
 </>
   ),
 };
@@ -102,9 +102,17 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <p>Hi, I'm Hyun &#128075;</p>
+
+        <p>Based in Brunei and backed by 6+ years of experience, I build digital experiences that help businesses grow.</p>
+
+        <p>I specialise in creating everything from minimalist personal portfolios to complex, full-scale web applications. By blending creative design with modern technical stacks, I ensure your brand is both beautiful and functional.</p>
+
+        <p>My commitment: No mess, no stress. I use structured project management to ensure every milestone is met and every update is clear.</p>
+
+        <p>Straightforward communication. Rapid response times. High-end results.</p>
+
+        <p>Let’s build your future online. 🚀</p>
       </>
     ),
   },
@@ -113,42 +121,129 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Lumora Studio",
+        timeframe: "Sep. 2025 - Present",
+        role: "Founder & Creative Technologist",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <div key="fly-achievement-1">
+            Conceptualised and launched Lumora Studio, overseeing the end-to-end development of the "lumobooth" mobile studio.
+          </div>,
+          <div key="fly-achievement-2">
+            Engineered a portable, premium self-photography experience, scaling the business from a fixed concept to a mobile service for corporate and private events.
+          </div>,
+          <div key="fly-achievement-2">
+            Designed and deployed the company’s digital presence and internal tools, focusing on seamless user experience and performance.
+          </div>,
+          <div key="fly-achievement-2">
+            Directed all branding assets, including website UI, social media content, and physical marketing collaterals.
+          </div>,
+          <div key="fly-achievement-2">
+            Manages full-scale event operations, from client consultation and site scouting to inventory management and on-site production.
+          </div>,
+          <div key="fly-achievement-2">
+            Curated a "private studio" atmosphere within a mobile footprint, managing lighting design, backdrop selection, and prop curation to maintain a premium brand standard.
+          </div>,
+
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+            // src: "/images/projects/project-01/cover-01.jpg",
+            // alt: "Once UI Project",
+            // width: 16,
+            // height: 9,
+          //},
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "GMPF SDN. BHD",
+        timeframe: "Apr. 2022 - Mar. 2023",
+        role: "Creative Designer & Director",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <div key="creativ3-achievement-1">
+            Designed high-impact social media assets, key visuals, and marketing collaterals for diverse brand campaigns.
+          </div>,
+          <div key="creativ3-achievement-2">
+            Managed comprehensive production timelines as a Producer, ensuring seamless execution from concept to final delivery.
+          </div>,
+          <div key="creativ3-achievement-1">Directed videography for major campaigns, managing professional lighting and audio configurations to ensure high-production value.
+          </div>,
+          <div key="creativ3-achievement-1">Executed professional product and lifestyle photography, including high-end post-production and retouching.
+          </div>,
+          <div key="creativ3-achievement-1">Maintained asset integrity and resource management through systematic monthly inventory audits.
+          </div>,
+        ],
+        images: [],
+      },
+      {
+        company: "Kaleidoscope Studio",
+        timeframe: "Feb. 2019 - Jul. 2019",
+        role: "Multimedia Design Intern",
+        achievements: [
+          <div key="creativ3-achievement-1">
+            Contributed to the design and conceptualisation of the studio&#39;s website, focusing on a clean and functional user experience.
+          </div>,
+          <div key="creativ3-achievement-2">
+            Developed high-impact promotional posters and custom label designs for various studio products and services.
+          </div>,
+          <div key="creativ3-achievement-1">Produced professional photography and videography assets to drive engagement for promotional events and studio campaigns.
+          </div>,
+          <div key="creativ3-achievement-1">Managed post-production workflows for digital and print assets, ensuring a consistent brand aesthetic across all platforms.
+          </div>,
+        ],
+        images: [],
+      },
+      {
+        company: "Royal Brunei Catering",
+        timeframe: "Jan. 2019 - Jan. 2019",
+        role: "Multimedia Design Intern",
+        achievements: [
+          <div key="creativ3-achievement-1">
+            Designed high-impact promotional posters and digital assets for a diverse portfolio of restaurant brands.
+          </div>,
+          <div key="creativ3-achievement-2">
+            Conceptualised and executed animated designs to enhance social media engagement and digital marketing campaigns.
+          </div>,
+          <div key="creativ3-achievement-1">Directed and produced promotional video content and cinematography for the marketing team to drive brand awareness.
+          </div>,
+          <div key="creativ3-achievement-1">Captured professional imagery for several restaurant outlets, focusing on high-end presentation and brand storytelling.
+          </div>,
+        ],
+        images: [],
+      },
+      {
+        company: "PixLife Studio",
+        timeframe: "Mar. 2017 - Dec. 2017",
+        role: "Cinematography & Production Intern",
+        achievements: [
+          <div key="creativ3-achievement-1">
+            Directed and filmed high-end wedding productions, leading on-site teams to ensure comprehensive coverage of live events.
+          </div>,
+          <div key="creativ3-achievement-2">
+            Managed end-to-end technical setups, including camera configurations, gimbal stabilization, and professional lighting arrays.
+          </div>,
+          <div key="creativ3-achievement-1">Developed expertise in professional studio photography, specializing in the use of external standing flash and advanced lighting techniques.
+          </div>,
+          <div key="creativ3-achievement-1">Engineered the full editing workflow to produce polished, cinematic wedding films, managing everything from color grading to narrative pacing.
+          </div>,
+        ],
+        images: [],
+      },
+      {
+        company: "MMW Creative",
+        timeframe: "Jun. 2016 - Aug. 2016",
+        role: "Multimedia & Web Intern",
+        achievements: [
+          <div key="creativ3-achievement-1">
+            Designed an interactive map layout and floor plan for a large-scale project, currently operational on public interactive kiosks.
+          </div>,
+          <div key="creativ3-achievement-2">
+            Collaborated with the development team to design and build help documentation using HTML, ensuring technical information was accessible and user-friendly.
+          </div>,
+          <div key="creativ3-achievement-1">Created high-impact promotional posters and produced custom animations to enhance video marketing content.
+          </div>,
+          <div key="creativ3-achievement-1">Produced durable design systems that continue to serve as the primary navigational interface for the client&#39;s interactive installations.
+          </div>,
         ],
         images: [],
       },
@@ -159,12 +254,13 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universiti Teknologi Brunei",
+        description: <>B.Sc. in Digital Media &#40;Hons&#41;</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Politeknik Brunei",
+        description: <><p>Advanced Diploma in Digital Media</p><p><br/>Awarded the <Text as="strong">best student award</Text> under School of Information,
+Communications & Technology &#40;SCI&#41;</p></>,
       },
     ],
   },
@@ -173,45 +269,26 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Frontend",
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "React",
+            icon: "react",
           },
           {
             name: "Next.js",
             icon: "nextjs",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Backend",
+        tags: [
+          {
+            name: "REST APIs",
+            icon: "api",
           },
           {
             name: "Supabase",
@@ -219,14 +296,48 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "CMS",
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "WordPress",
+            icon: "wordpress",
+          },
+          {
+            name: "WooCommerce",
+            icon: "woocommerce",
           },
         ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Design Tools",
+        tags: [
+          {
+            name: "Figma",
+            icon: "figma",
+          },
+          {
+            name: "Adobe Suite",
+            icon: "adobe",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Version Control",
+        tags: [
+          {
+            name: "Git",
+            icon: "git",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
     ],
   },
@@ -248,6 +359,13 @@ const work: Work = {
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
+};
+
+const services = {
+  path: "/services",
+  label: "Services",
+  title: `Services – ${person.name}`,
+  description: "Frontend design and development services for local businesses in Brunei.",
 };
 
 const gallery: Gallery = {
@@ -301,4 +419,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, services };

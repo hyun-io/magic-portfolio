@@ -1,0 +1,68 @@
+---
+title: "Delta Force Map Rotation Tracker"
+publishedAt: "2025-04-01"
+summary: "A real-time web application that tracks and displays map rotations for Delta Force: Operations game modes. The app automatically detects the user's timezone, shows current and upcoming maps, and provides a clean, responsive interface for tracking both standard Operations and limited-time event modes like Fiery Owl Hunt."
+images:
+  - "/images/projects/02/cover-01.jpg"
+team:
+  - name: "Hyun"
+    role: "Frontend Designer & Developer"
+    avatar: "/images/avatar.jpg"
+link: "https://df.hyun.im/"
+---
+
+*April 2025 - Present | Version 2.0.1*
+
+## Overview
+
+A real-time web application that tracks and displays map rotations for Delta Force: Operations game modes. The app automatically detects the user's timezone, shows current and upcoming maps, and provides a clean, responsive interface for tracking both standard Operations and limited-time event modes like Fiery Owl Hunt. 
+
+Solves a critical pain point for Delta Force players – knowing which maps are currently active and when rotations occur. Unlike static spreadsheets or manual timezone calculations, this app automatically adjusts to the user's local time and provides real-time countdowns to the next rotation. The application features a dual-mode system that allows players to switch between standard Operations rotations and special event modes. With a dark, game-inspired design featuring translucent backgrounds, map imagery, and smooth animations, DFWatch delivers an immersive experience that complements the game's aesthetic. Built as a progressive web application, it works seamlessly across desktop and mobile devices, ensuring players can check map rotations whether they're at their gaming PC or on the go.
+
+## Key Features
+
+### Core Functionality
+- **Real-time Map Tracking** – Automatically displays current and upcoming map rotations based on UTC schedules
+- **Timezone Auto-Detection** – No manual configuration needed; the app detects and adjusts to the user's local timezone
+- **Live Countdown Timer** – Shows exactly when the next rotation will begin with hour/minute/second precision
+- **Dual Game Modes** – Switch between standard Operations and limited-time event modes (e.g., Fiery Owl Hunt)
+- **24-Hour Full Schedule** – View complete daily rotations in an expandable, scrollable table
+
+### User Experience
+- **Responsive Design** – Optimized for desktop, tablet, and mobile devices with adaptive layouts
+- **Visual Map Cards** – Each map displays with themed background imagery, difficulty indicators, and time remaining
+- **Dynamic Background** – Background imagery changes based on selected game mode for immersive theming
+- **Difficulty Indicators** – Color-coded badges for Hard, Normal, and Adaptation difficulty levels
+- **Persistent State** – Remembers user preferences and displays dismissible information banners
+
+### Technical Features
+- **Client-side Timezone Handling** – No server-side timezone calculations needed; all adjustments happen in the browser
+- **Real-time Updates** – Countdown timer updates every second without page refresh
+- **Optimized Images** – Next.js Image component for lazy loading, responsive sizing, and blur-up placeholders
+- **TypeScript Support** – Full type safety across the codebase
+- **Accessible Design** – Semantic HTML, ARIA labels, and keyboard-navigable interface
+
+## Impact & Results
+- **Immediate Value** – Provides instant, accurate map rotation information without manual spreadsheet lookups
+- **Cross-Platform** – Accessible on any device with a modern web browser
+- **Zero Configuration** – Users simply visit the site; everything works automatically
+- **Community-Focused** – Built specifically for the Delta Force gaming community's needs
+- **Event-Ready** – Easily updateable schedule system for seasonal events and special modes
+
+## Key Technical Achievements
+
+1. **Timezone Math** – Implemented robust UTC-to-local timezone conversion that handles all global timezones correctly
+2. **Real-time Countdown** – Built a performant countdown system that updates every second without causing re-renders
+3. **Dual Data Structures** – Designed flexible data models that support multiple game modes with different rotation patterns
+4. **Dynamic Grid System** – Created a responsive card grid that adapts to variable numbers of maps per rotation
+5. **Modal Schedule Viewer** – Built an accessible, scrollable modal with sticky headers for full-schedule viewing
+6. **Contextual Backgrounds** – Implemented dynamic background switching based on active game mode for enhanced immersion
+
+## Technologies Used
+
+![Next.js](https://img.shields.io/badge/Next.js-15.0.0-000000?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.16-06B6D4?style=flat-square&logo=tailwind-css)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel)
+![ESLint](https://img.shields.io/badge/ESLint-8.0-4B32C3?style=flat-square&logo=eslint)

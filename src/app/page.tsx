@@ -10,6 +10,7 @@ import {
   Schema,
   Meta,
   Line,
+  Pulse,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -61,6 +62,7 @@ export default function Home() {
                 arrow={false}
                 href={home.featured.href}
               >
+                <Pulse variant="success" size="m"/>
                 <Row paddingY="2">{home.featured.title}</Row>
               </Badge>
             </RevealFx>

@@ -1,6 +1,7 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
+import Image from "next/image";
 
 import {
   Heading,
@@ -62,6 +63,47 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
     return null;
   }
 
+  // Check if it's a badge image
+  const isBadge = src.includes('img.shields.io') || 
+                  src.includes('badge') ||
+                  src.includes('shields.io');
+
+  // For badges, return inline img without container div
+  if (isBadge) {
+    return (
+      <img 
+        src={src} 
+        alt={alt || 'Badge'} 
+        style={{ 
+          height: '20px',
+          width: 'auto',
+          display: 'inline-block',
+          margin: '0 4px',
+          verticalAlign: 'middle'
+        }}
+        {...props}
+      />
+    );
+  }
+
+  // For local images that need optimization, use Next.js Image
+  if (src.startsWith('/') || src.includes('localhost')) {
+    return (
+      <Media
+        marginTop="8"
+        marginBottom="16"
+        enlarge
+        radius="m"
+        border="neutral-alpha-medium"
+        sizes="(max-width: 960px) 100vw, 960px"
+        alt={alt}
+        src={src}
+        {...props}
+      />
+    );
+  }
+
+  // Default fallback for other external images
   return (
     <Media
       marginTop="8"
@@ -72,6 +114,7 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
       sizes="(max-width: 960px) 100vw, 960px"
       alt={alt}
       src={src}
+      unoptimized={true}
       {...props}
     />
   );
@@ -121,10 +164,15 @@ function createInlineCode({ children }: { children: ReactNode }) {
   return <InlineCode>{children}</InlineCode>;
 }
 
-function createCodeBlock(props: any) {
+interface CodeBlockProps {
+  children?: ReactNode;
+  [key: string]: any;
+}
+
+function createCodeBlock(props: CodeBlockProps) {
   // For pre tags that contain code blocks
-  if (props.children && props.children.props && props.children.props.className) {
-    const { className, children } = props.children.props;
+  if (props.children && (props.children as any).props && (props.children as any).props.className) {
+    const { className, children } = (props.children as any).props;
 
     // Extract language from className (format: language-xxx)
     const language = className.replace("language-", "");
