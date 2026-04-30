@@ -70,6 +70,9 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
 
   // For badges, return inline img without container div
   if (isBadge) {
+    // Filter out props that are meant for div/Media but not for img
+    const { ref, enlarge, radius, border, sizes, unoptimized, loading, priority, caption, objectFit, aspectRatio, ...imgProps } = props;
+    
     return (
       <img 
         src={src} 
@@ -81,7 +84,7 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
           margin: '0 4px',
           verticalAlign: 'middle'
         }}
-        {...props}
+        {...imgProps}
       />
     );
   }
