@@ -381,7 +381,7 @@ export default function Services() {
               flex={1}
               height="1"
               background="neutral-alpha-medium"
-              hide="s"
+              hide
             />
           )}
         </Row>
